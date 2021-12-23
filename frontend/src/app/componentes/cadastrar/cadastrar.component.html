@@ -1,0 +1,23 @@
+
+
+<div class="container">
+  <h2 class="text-center">Cadastro de Transferências</h2>
+  <form>
+    <div class="mb-3">
+      <label for="nomeCliente" class="form-label">Nome do Cliente:</label>
+      <input [(ngModel)]="transferencia.nomeCliente" type="text" class="form-control" id="nomeCliente" name="nomeCliente" aria-describedby="nomeClienteHelp" >
+    </div>
+    <div class="mb-3">
+      <label for="contaCliente" class="form-label">Conta do Cliente:</label>
+      <input [(ngModel)]="transferencia.contaCliente" type="text" class="form-control" id="contaCliente" name="contaCliente" aria-describedby="contaClienteHelp" >
+    </div>
+    <div class="mb-3">
+      <label for="obs" class="form-label">Valor</label>
+      <input [(ngModel)]="transferencia.valor" type="number" class="form-control" id="valor" name="valor" >
+    </div>
+    <div class="mb-3 form-check">
+      <button (click)="adicionar()" class="btn btn-primary">Adicionar</button>
+    </div>
+
+  </form>
+</div>

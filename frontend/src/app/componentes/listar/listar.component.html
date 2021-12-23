@@ -1,0 +1,29 @@
+<div class="container">
+<h2 class="text-center">Lista de Transferências</h2>
+
+<div class="d-flex justify-content-end">
+<button class="btn btn-primary mb-3 me-5"  type="button" routerLink="/cadastro">Realizar Transferência</button>
+</div>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col"> ID</th>
+      <th scope="col"> Nome do Cliente</th>
+      <th scope="col"> Conta do Cliente</th>
+      <th scope="col"> Valor</th>
+      <th scope="col" > Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of ListarTransferencias ">
+      <th>{{item.id_transferencia}}</th>
+      <td>{{item.nomeCliente}}</td>
+      <td>{{item.contaCliente}}</td>
+      <td>{{item.valor | currency: "BRL"}}</td>
+      <td><button (click)="editar(item.id_transferencia)" type="button" class="btn btn-warning me-2">Editar</button>
+      <button (click)="excluir(item.id_transferencia)" type="button" class="btn btn-danger">Excluir</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
